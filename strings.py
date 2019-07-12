@@ -43,3 +43,9 @@ print("I'm killing it at learning {}".format(programingLang))
 programingLang = "C++"
 print("I'm killing it at learning {}".format(programingLang))
 #prints "I'm killing it at learning C++"
+
+
+###String Methods
+
+string = "Python is so fly"
+string.upper()
