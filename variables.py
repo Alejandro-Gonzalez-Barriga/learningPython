@@ -55,3 +55,4 @@ for = 95
 #the only special character is the underscore '_', no other character is allowed.
 totalChickens$ = 100
 #this has a SyntaxError
+//
