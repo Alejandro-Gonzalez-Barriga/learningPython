@@ -61,3 +61,80 @@ for row in range(1, 4):#iterates through rows in matrix
 #1 2 3
 #4 5 6
 #7 8 9
+
+## break,  based on a certain condigion the looping statement stops
+
+for number in range(1, 11):
+    if number == 5:
+        break
+    else:
+        print(number)
+
+#prints
+#1
+#2
+#3
+#4
+
+## continue, skips a particular StopAsyncIteration
+
+for number in range(1, 11):
+  if number == 5:
+    continue
+  else:
+    print(number)
+
+#prints
+#1
+#2
+#3
+#4
+#6
+#7
+#8
+#9
+#10
+
+## else, this is how else works without an if condition
+#in the following example the condition if condition will never be met
+#so the last if statement will be executed
+
+for number in range(1, 11):
+  if number == 15:
+    break
+  else:
+    print(number)
+else:
+  print("All numbers where printed without a breaking the loop")
+
+#prints
+#1
+#2
+#3
+#4
+#5
+#6
+#7
+#8
+#9
+#10
+#All numbers where printed without a breaking the loop
+
+##what happens if the condition is met?
+
+for number in range(1, 11):
+  if number == 5:
+    break
+  else:
+    print(number)
+else:
+  print("All numbers where printed without a breaking the loop")
+
+#prints
+#1
+#2
+#3
+#4
+
+
+###go to file called programTwo.py
