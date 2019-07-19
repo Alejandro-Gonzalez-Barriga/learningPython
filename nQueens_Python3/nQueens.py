@@ -5,6 +5,16 @@ class NQueens:#we define a class to build different matrix representation fo eac
         self.solutions = 0#the counter for each solution found
         self.solve()#this method solves for solutions depending on the size of the board
 
+    def solve(self):
+        positions = [-1] * self.size#creates a list (called positions) the size of the input given by the user. Each index will have a starting vale of -1, this will be a one dimensional list where the index number equals the position of the row where the the queen will be placed and the value will equal to the positin in the cloumn where the queen will be placed
+        #positions can will be pushed into a solutions list and be stored in the database for future reference
+        self.put_queen(positions, 0)#calls the put_queen function with the (positions) list and 0 index as parameter
+
+        print("Found", self.solutions, "solutions.") #this line will print a string stating the total number of solutions found
+
+
+    def put_queen(self, positions, target_row):
+
     def show_full_board(self, positions):
         for row in range(self.size):
             line = ""
