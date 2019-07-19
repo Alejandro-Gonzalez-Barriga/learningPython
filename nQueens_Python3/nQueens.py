@@ -14,6 +14,14 @@ class NQueens:#we define a class to build different matrix representation fo eac
 
 
     def put_queen(self, positions, target_row):
+        if target_row == self.size:#once target row equals the size of the board the function will stop running
+            self.show_full_board(positions)#and will display the solution
+            self.solutions += 1#the solutions variable will increase by 1 every time a solutions is found
+        else:
+            for column in range(self.size):#iterates through the positions list
+                if self.check_place(positions, target_row, column):#calls the check_place function for every position of the board
+                    positions[target_row] = column#when the if condition in check_place function return false, the column will have the same value as the target row
+                    self.put_queen(positions, target_row + 1)#after every iteration of check_place function, target_row will increment by 1 and put_queen function will run again
 
     def show_full_board(self, positions):
         for row in range(self.size):

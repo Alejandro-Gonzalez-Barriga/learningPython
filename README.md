@@ -1,6 +1,14 @@
 # learningPython
 
 This repository contains the N Queens challenge solved in Python3(inside the nQueens_Python3 folder).
+
+You can run this program directly from the terminal by
+going to cloning the this repo,
+going to the folder that contains the nQueens.py file,
+double clicking the nQueens.py file.
+At this point the terminal in your computer should open.
+Follow the prompts in the terminal and watch the majic happen!
+
 Sources:
 https://solarianprogrammer.com/2017/11/20/eight-queens-puzzle-python/
 
