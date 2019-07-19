@@ -34,17 +34,42 @@ class NQueens:#we define a class to build different matrix representation fo eac
             print(line)
         print("\n")#this line prints a new line to separate each matrix
 
+    def check_place(self, positions, ocuppied_rows, column):
+        for i in range(ocuppied_rows):
+            if positions[i] == column or \
+                positions[i] - i == column - ocuppied_rows or \
+                positions[i] + i == column + ocuppied_rows:
+#the above block of code checks if the placement of a queen at a given position is a valid option by
+#the fist statements checks for rook moves
+#the second and third statement checks for bishop moves(diagonal lines, one with a positive slope and the other with a negative slope)
+
+                return False#if false, that means at the current position, the queen can be attacked and therefor a possible solution would be null
+        return True#if true add 1 to the target_row variable(this means move to the next position (to the right of the board))*and run the self_check_place position again for the new position of i
+
+    def show_full_board(self, positions):
+        for row in range(self.size):
+            line = ""
+            for column in range(self.size):
+                if positions[row] == column:
+                    line += "Q "
+                else:
+                    line += ". "
+            print(line)
+        print("\n")#this line prints a new line to separate each matrix
 
 
 
-print("Enter size of board: ")#prompts the user to enter a board size
 
-qNum = int(input())# assigns user input to num variable, also type casts the input
+print("Enter num: ")
 
-#script to execute all code in this file
+qNum = int(input())
+
 def main(qNum):
+    """Initialize and solve the n queens puzzle"""
     NQueens(qNum)
 
-
 if __name__ == "__main__":
+    # execute only if run as a script
     main(qNum)
+
+input("Press any key to exit")
