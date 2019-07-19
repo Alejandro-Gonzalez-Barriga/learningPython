@@ -4,15 +4,29 @@ class NQueens:#we define a class to build different matrix representation fo eac
         self.size = size#the size of the board
         self.solutions = 0#the counter for each solution found
         self.solve()#this method solves for solutions depending on the size of the board
-        
+
+    def show_full_board(self, positions):
+        for row in range(self.size):
+            line = ""
+            for column in range(self.size):
+                if positions[row] == column:
+                    line += "Q "
+                else:
+                    line += ". "
+            print(line)
+        print("\n")#this line prints a new line to separate each matrix
 
 
 
-print("Enter num: ")
 
-num = int(input())
+print("Enter size of board: ")#prompts the user to enter a board size
 
-for row in range(1, num):#iterates through rows in matrix
-  for column in range(1, num):#iterates through the columns the matrix
-    print(0, end = " ")#prints the num and ends with a space after every print statement
-  print()#this empty print function will print the num dymanically after every column loop is executed
+qNum = int(input())# assigns user input to num variable, also type casts the input
+
+#script to execute all code in this file
+def main(qNum):
+    NQueens(qNum)
+
+
+if __name__ == "__main__":
+    main(qNum)
